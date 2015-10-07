@@ -1,24 +1,26 @@
 # Share Extension Helper #
 By: Protonet GmbH
 
-Authors: Joschka Schulz
+Authors: Joschka Schulz,
+         Timo Tiuraniemi
 
 ## Adding the Plugin ##
 
 Use the Cordova CLI and type in the following command:
 
-`cordova plugin add https://github.com/protonet/cordova-plugin-share-extension-helper.git`
+`cordova plugin add https://github.com/extendedmind/cordova-plugin-share-extension-helper.git`
 
 ## Description
 
 This application makes it possible to load variables given from the share extension input. It's important to configure the CDVViewController the right way.
 
-At the moment it's only possible to share one image. But please feel free to update that code for a more complex usecase.s
+At the moment it's only possible to share one link.
 
 ### ShareViewController.h
 
     @interface ShareViewController : CDVViewController
-      @property NSURL *imageExtensionUrl;
+      @property NSURL *linkUrl;
+      @property NSString *linkTitle;
     @end
 
 ### ShareViewController.m
